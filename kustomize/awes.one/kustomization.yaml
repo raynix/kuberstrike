@@ -14,5 +14,5 @@ resources:
 #     files:
 #       - server.cfg
 
-patchesStrategicMerge:
-  - patch.yaml
+# patchesStrategicMerge:
+#   - patch.yaml
