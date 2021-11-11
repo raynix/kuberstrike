@@ -29,6 +29,9 @@ spec:
           ports:
             - containerPort: 27015
               protocol: UDP
+          envFrom:
+            - secretRef:
+                name: csgo
           volumeMounts:
             # - name: kuberstrike-config-volume
             #   mountPath: /home/steam/csgo-dedicated/csgo/cfg/server.cfg

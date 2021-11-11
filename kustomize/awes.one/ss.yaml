@@ -1,0 +1,14 @@
+apiVersion: bitnami.com/v1alpha1
+kind: SealedSecret
+metadata:
+  creationTimestamp: null
+  name: csgo
+  namespace: kuberstrike
+spec:
+  encryptedData:
+    SRCDS_TOKEN: AgCGLMkfsqhhCTlZclV303tqo12rHO0PcYernULc2sszWGeW3RClYaI9omMXsIxDooo2i7PNwCyb3LKIwFBhMk+kHbD/pOpjt/9yXX9ycA4oL3F/gx+WuGj1IWtddPrgVb/qOEKJGKhYaW7gyUwohJ9H1sL83/0bg4PKB0FXCpWl5AbuRJjg1GqaQJvBEe4URYnyGYMxRCMtnz3Neah0KP78d9VUS0jql48GAa+hyRsTjIlOoxVw9il0UF28GOar83+hDN68uAL20r3xTVXsEkXRaJKxAB1SropyU5YhrTX65I9sBUkHkseTBxyfX09aILJuNcix/f3YvwX/D9Ouj+OFa4IxuxZ9Qnhjs50/OpE1y3WZXrbsFRaZnRlY8ZlJY5UgGr7ZW89pKLk4isJ2XD6VE0rMka045MwgAEVms27PvZ2U6Gl0k397nHIZDrggGTA7BX14wHV+Ncz2GhYDa6VfFYb0CSfiLt/qYvtsPAhl7c1yJqj+7pSG25Hfn5orN4SOiX7AU/y6oJTpC9WDaIAX4l1NoYBJA/cFmL7a22b49Xnx7N7yhS38j8YjjnV/HDDgzzixuXqJkEjWEVa74gJWV1hi+0Fu8qZiqmKHXzboymtlp2yrx1nWauTWEjDzJuUtxPPAKyKAG02kNPRQ66uvjvmbAL5kKjiAX8DLBNsCBDVQ7G5ZR663unLWiYsKAMR3EspNjyrFfPXqf7bEqUy9icPHCJVsRrgh+0Gz3vV/kA==
+  template:
+    metadata:
+      creationTimestamp: null
+      name: csgo
+      namespace: kuberstrike
