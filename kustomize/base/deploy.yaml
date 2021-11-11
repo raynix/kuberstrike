@@ -1,0 +1,48 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kuberstrike
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kuberstrike
+  template:
+    metadata:
+      labels:
+        app: kuberstrike
+    spec:
+      affinity:
+        nodeAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            nodeSelectorTerms:
+            - matchExpressions:
+              - key: kubernetes.io/arch
+                operator: In
+                values:
+                - amd64
+      containers:
+        - name: kuberstrike-server
+          image: cm2network/csgo:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 27015
+              protocol: UDP
+          volumeMounts:
+            # - name: kuberstrike-config-volume
+            #   mountPath: /home/steam/csgo-dedicated/csgo/cfg/server.cfg
+            #   subPath: server.cfg
+            - name: data-volume
+              mountPath: /home/steam/csgo-dedicated
+          resources:
+            requests:
+              cpu: 800m
+              memory: 4Gi
+      volumes:
+        # - name: kuberstrike-config-volume
+        #   configMap:
+        #     name: kuberstrike
+        - name: data-volume
+          persistentVolumeClaim:
+            claimName: kuberstrike
